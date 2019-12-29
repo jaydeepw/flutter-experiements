@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -56,8 +57,9 @@ class InstaList extends StatelessWidget {
                 ),
                 Flexible(
                   fit: FlexFit.loose,
-                  child: new Image.network(
-                    list[index],
+                  child: new CachedNetworkImage(
+                    // placeholder: (context, url) => CircularProgressIndicator(),
+                    imageUrl: list[index],
                     fit: BoxFit.cover,
                   ),
                 ),
