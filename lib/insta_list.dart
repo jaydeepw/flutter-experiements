@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutterwhatsapp/insta_stories.dart';
 
 class InstaList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var list = new List.of(["https://www.howtogeek.com/wp-content/uploads/2019/09/04c.gif", "https://66.media.tumblr.com/ea6e5c19f89b4e279f2f20a4bb31bb42/tumblr_nfakifdir61twkrf5o1_1280.gif",
+      "https://creativepool.com/files/candidate/portfolio/full/1607338.gif", "https://images-platform.99static.com/Xpj8jc_-csjIh9OIQCk7OqGDLfQ=/0x0:1080x1080/fit-in/900x675/99designs-contests-attachments/97/97958/attachment_97958792",
+      "https://www.howtogeek.com/wp-content/uploads/2019/09/04c.gif"]);
     var deviceSize = MediaQuery.of(context).size;
     return ListView.builder(
       itemCount: 5,
@@ -55,7 +57,7 @@ class InstaList extends StatelessWidget {
                 Flexible(
                   fit: FlexFit.loose,
                   child: new Image.network(
-                    "https://www.howtogeek.com/wp-content/uploads/2019/09/04c.gif",
+                    list[index],
                     fit: BoxFit.cover,
                   ),
                 ),
