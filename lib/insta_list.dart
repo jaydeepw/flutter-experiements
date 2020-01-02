@@ -13,19 +13,19 @@ class InstaList extends StatelessWidget {
     ]);
 
     var listOfDescription = new List.of([
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "To make animations in Flutter, there are many different options available. How do you choose the right animation widget? This article, part of our animation series, delves into the best use cases for TweenAnimationBuilder versus when a different widget is best for the job. The previous article in this series explains just how powerful all the built-in implicit animation widgets are and how much you can accomplish with them.",
+      "Why use TweenAnimationBuilder? Suppose you want to create a basic animation: an animation that doesn’t repeat forever and is just one widget or widget tree. Flutter has a convention of naming its implicitly animated widgets AnimatedFoo, where Foo is the name of the property that animates. Don’t believe me? Here’s a sample of built-in, implicitly animated widgets: AnimatedContainer, AnimatedCrossFade, AnimatedDefaultTextStyle, AnimatedModalBarrier, AnimatedOpacity, AnimatedPadding",
+      "However, if you need to create a basic animation and none of those built-in implicit animations are what you’re looking for, you can still create that animation with TweenAnimationBuilder!",
+      "To use TweenAnimationBuilder, I set the length of time that I want my animation to take with the duration parameter, and the range of values that I want it to animate between with the…Tween parameter. As the name suggests, a Tween object enables you to specify a range of values that you want to animate between",
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
     ]);
 
     var title = new List.of([
+      "This is a short title",
       "This is a long title",
-      "This is a long title",
-      "This is a long title",
-      "This is a long title",
-      "This is a long title"
+      "Elon Must invests stuff",
+      "Future is great and living standards are going to grow globally",
+      "I dont know what to put here, so just adding this line"
     ]);
     var deviceSize = MediaQuery.of(context).size;
     return ListView.builder(
@@ -42,7 +42,7 @@ class InstaList extends StatelessWidget {
               children: <Widget>[
                 new Container (
                   padding: const EdgeInsets.all(12.0),
-                  child: new Text ('$index ' + title[index], textAlign: TextAlign.left, style: TextStyle(color: Colors.black,
+                  child: new Text (title[index], textAlign: TextAlign.left, style: TextStyle(color: Colors.black,
                   fontSize: 16.0))
                 ),
                 Flexible(
@@ -84,7 +84,7 @@ class InstaList extends StatelessWidget {
                   padding: const EdgeInsets.all(12.0),
                   child: new Column (
                     children: <Widget>[
-                      new Text ('$index ' + listOfDescription[index], textAlign: TextAlign.left, style: TextStyle(color: Colors.black87))
+                      new Text (listOfDescription[index], textAlign: TextAlign.left, style: TextStyle(color: Colors.black87))
                     ],
                   ),
                 ),
